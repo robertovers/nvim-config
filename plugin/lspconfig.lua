@@ -36,3 +36,8 @@ lsp.rust_analyzer.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
+
+lsp.pylsp.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
