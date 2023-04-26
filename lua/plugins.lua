@@ -25,5 +25,6 @@ packer.startup(function(use)
   use "nvim-lua/plenary.nvim"
   use "akinsho/bufferline.nvim"
   use "lewis6991/gitsigns.nvim"
+  use "nvim-tree/nvim-tree.lua"
 end)
 
