@@ -30,7 +30,9 @@ packer.startup(function(use)
         "glepnir/dashboard-nvim",
         event = "VimEnter",
         config = function()
-            require("dashboard").setup({})
+            require("dashboard").setup({
+                theme = "hyper"
+            })
         end
     }
     use "junegunn/fzf"

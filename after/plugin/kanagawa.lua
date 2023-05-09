@@ -37,4 +37,5 @@ vim.cmd([[
     highlight DiagnosticSignHint guibg=NONE ctermbg=NONE
     highlight DiagnosticSignWarn guibg=NONE ctermbg=NONE
     highlight DiagnosticSignError guibg=NONE ctermbg=NONE
+    highlight TelescopeBorder guibg=NONE ctermbg=NONE
 ]])

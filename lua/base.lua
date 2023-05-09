@@ -5,6 +5,7 @@ vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
 vim.wo.number = true
+vim.opt.signcolumn = "yes:1"
 
 vim.opt.cmdheight = 1
 vim.opt.autoindent = true
