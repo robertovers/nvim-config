@@ -1,4 +1,3 @@
-
 local signs = {
     Error = "X",
     Warn = "!",
@@ -21,3 +20,5 @@ vim.diagnostic.config({
         source = "always",
     },
 })
+
+vim.api.nvim_set_keymap("n", "<leader>d", "<cmd>lua vim.diagnostic.open_float({ scope = line })<CR>", { noremap = true })
