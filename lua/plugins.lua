@@ -26,15 +26,6 @@ packer.startup(function(use)
     use "akinsho/bufferline.nvim"
     use "lewis6991/gitsigns.nvim"
     use "nvim-tree/nvim-tree.lua"
-    use {
-        "glepnir/dashboard-nvim",
-        event = "VimEnter",
-        config = function()
-            require("dashboard").setup({
-                theme = "hyper"
-            })
-        end
-    }
     use "junegunn/fzf"
     use "junegunn/fzf.vim"
 end)
