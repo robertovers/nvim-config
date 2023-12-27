@@ -44,7 +44,7 @@ lsp.pylsp.setup {
       pylsp = {
         plugins = {
           -- linter options
-          flake8 = { enabled = true, maxLineLength = 120 },
+          flake8 = { enabled = true, maxLineLength = 100 },
           pylint = { enabled = false },
           pyflakes = { enabled = false },
           pycodestyle = { enabled = false },
