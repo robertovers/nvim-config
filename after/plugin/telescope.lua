@@ -28,3 +28,11 @@ vim.keymap.set('n', '<leader>f',
             hidden = true
         })
     end)
+
+vim.keymap.set('n', '<leader>r',
+    function ()
+        builtin.live_grep({
+            no_ignore = false,
+            hidden = true
+        })
+    end)

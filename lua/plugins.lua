@@ -5,7 +5,10 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
     use "wbthomason/packer.nvim"
     use "tjdevries/colorbuddy.nvim"
-    use "rebelot/kanagawa.nvim"
+    use {
+      "mcchrish/zenbones.nvim",
+      requires = "rktjmp/lush.nvim"
+    }
     use "nvim-tree/nvim-web-devicons"
     use {
         "hoob3rt/lualine.nvim",
@@ -28,5 +31,9 @@ packer.startup(function(use)
     use "nvim-tree/nvim-tree.lua"
     use "junegunn/fzf"
     use "junegunn/fzf.vim"
+    use {
+    'goolord/alpha-nvim',
+      requires = 'nvim-tree/nvim-web-devicons'
+    }
 end)
 
