@@ -1,9 +1,0 @@
-[ ] popup backgrounds
-[ ] border colours
-[ ] telescope
-[ ] multiline string colours
-[ ] class name colours
-[ ] terminal statusline
-[ ] dashboard
-[ ] turn off italics
-[ ] cool function for dashboard

@@ -15,7 +15,7 @@ local palette = util.palette_extend({
 	wood = hsluv("#ffde99"),
 	water = hsluv("#98bede"),
 	blossom = hsluv("#999abd"),
-	sky = hsluv("#6fbcbd"),
+	sky = hsluv("#84acac").li(10),
 	orange = hsluv("#e19972"),
 }, bg)
 
@@ -34,7 +34,7 @@ local specs = lush.extends({ base_specs }).with(function()
 			Exception { Keyword, gui = "nil" },
 			PreProc { fg = palette.rose.de(25), gui = "nil" },
 			Identifier { fg = palette.fg, gui = "nil" },
-			Function { fg = palette.water, gui = "nil" },
+			Function { fg = palette.sky, gui = "nil" },
 			Special { fg = palette.blossom.li(26), gui = "nil" },
 			Number { base_specs.Number, fg = palette.wood.de(30), gui = "nil" },
 		}

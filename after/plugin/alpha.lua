@@ -36,7 +36,7 @@ end
 
 dashboard.section.footer.val = footer()
 
-dashboard.section.header.opts.hl = "Number"
+dashboard.section.header.opts.hl = "PreProc"
 dashboard.section.footer.opts.hl = "Type"
 
 dashboard.opts.opts.noautocmd = true
