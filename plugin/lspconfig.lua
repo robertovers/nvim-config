@@ -7,11 +7,8 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lsp.lua_ls.setup {
+    on_attach = on_attach,
     capabilities = capabilities,
-    on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-    end,
-
     settings = {
         Lua = {
             diagnostics = {
@@ -27,14 +24,20 @@ lsp.lua_ls.setup {
 
 lsp.tsserver.setup {
     on_attach = on_attach,
+    capabilities = capabilities,
     filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-    cmd = { "typescript-language-server", "--stdio" },
-    capabilities = capabilities
+    cmd = { "typescript-language-server", "--stdio" }
 }
 
 lsp.rust_analyzer.setup {
     on_attach = on_attach,
     capabilities = capabilities
+}
+
+lsp.hls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    root_dir = function() return vim.fn.getcwd() end
 }
 
 lsp.pylsp.setup {
