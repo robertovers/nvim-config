@@ -1,4 +1,4 @@
-require("base")
-require("maps")
-require("plugins")
-require("diagnostics")
+require("config.options")
+require("config.maps")
+require("config.lazy")
+require("config.diagnostics")
