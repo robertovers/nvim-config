@@ -18,6 +18,7 @@ return {
       local palette = util.palette_extend({
         bg = hsluv("#101010"),
         fg = hsluv("#d9d9d9").li(10),
+        grey = hsluv("#919191"),
         rose = hsluv("#e17899").li(10),
         leaf = hsluv("#719872").li(10),
         wood = hsluv("#ffde99"),
@@ -33,9 +34,10 @@ return {
       local specs = lush.extends({ base_specs }).with(function()
         ---@diagnostic disable: undefined-global
         return {
-          Comment { base_specs.Comment, fg = palette.leaf, gui = "nil" },
+          Comment { base_specs.Comment, fg = palette.grey, gui = "nil" },
           Constant { base_specs.Constant, fg = palette.leaf, gui = "nil" },
           String { base_specs.String, fg = palette.leaf, gui = "nil"},
+          Type { base_specs.Type, fg = palette.grey, gui = "nil"},
           Statement { base_specs.Statement, fg = palette.blossom, gui = "nil" },
           Keyword { fg = palette.rose.de(12), gui = "nil" },
           Exception { Keyword, gui = "nil" },
@@ -44,6 +46,8 @@ return {
           Function { fg = palette.sky, gui = "nil" },
           Special { fg = palette.blossom.li(26), gui = "nil" },
           Number { base_specs.Number, fg = palette.wood.de(30), gui = "nil" },
+          CursorLine { bg = palette.bg.li(20) },
+          NvimTreeCursorLine { bg = palette.bg.li(20) },
           NvimTreeNormal { bg = palette.bg },
           NvimTreeIndentMarker { bg = palette.bg },
         }

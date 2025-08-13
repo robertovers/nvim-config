@@ -5,28 +5,20 @@ return {
   },
   cmd = "Telescope",
   keys = {
-    { 
-      "<leader>f", 
-      function() 
-        require("telescope.builtin").find_files({
-          no_ignore = false,
-          hidden = true
-        })
-      end, 
-      desc = "Find Files" 
+    {
+      "<C-f>",
+      function()
+        require("telescope.builtin").find_files({})
+      end,
+      desc = "Find Files"
     },
-    { 
-      "<leader>r", 
-      function() 
-        require("telescope.builtin").live_grep({
-          no_ignore = false,
-          hidden = true
-        })
-      end, 
-      desc = "Live Grep" 
+    {
+      "<C-r>",
+      function()
+        require("telescope.builtin").live_grep({})
+      end,
+      desc = "Live Grep"
     },
-    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-    { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Tags" },
   },
   config = function()
     local telescope = require("telescope")
@@ -45,9 +37,13 @@ return {
           theme = "dropdown",
           -- disables netrw and use telescope-file-browser in its place
           hijack_netrw = true,
-          mappings = {
-          },
         },
+        fzf = {
+          fuzzy = true,                    -- false will only do exact matching
+          override_generic_sorter = true,  -- override the generic sorter
+          override_file_sorter = true,     -- override the file sorter
+          case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+        }
       },
     })
   end,
